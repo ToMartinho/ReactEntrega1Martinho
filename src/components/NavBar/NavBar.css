@@ -1,0 +1,8 @@
+.NavBar{
+    display: flex;
+}
+
+.titulo{
+    position: relative;
+    text-align: left;
+}
