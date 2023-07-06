@@ -1,8 +1,20 @@
-.NavBar{
+.li{
+    display: inline;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.Titulo{
+    display: flex;
+    position: left;
+    margin-left: 50px;
+}
+
+.PadreLi{
     display: flex;
 }
 
-.titulo{
-    position: relative;
-    text-align: left;
+.CartIcon{
+    display: absolute;
 }
