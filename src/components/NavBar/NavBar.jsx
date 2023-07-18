@@ -4,23 +4,25 @@ import './NavBar.css'
 
 function NavBar(props) {
     return(
-        <nav>
-            <div className="Titulo">
-                <h2>Magic Store</h2>
-            </div>
-            
-            <div className="PadreLi">
-                <ul>
-                    <li className="li"><button>Singles</button></li>
-                    <li className="li"><button>Sealed</button></li>
-                    <li className="li"><button>Others</button></li>
-                </ul>                
-                
-            </div>
-            <div className="CartIcon">
+        <div>
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+                <div className="container-fluid">
+                    <a className="navbar-brand" href="#">5 colors MTGStore</a>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div className="navbar-nav">
+                            <a className="nav-link active" aria-current="page" href="#">Home</a>
+                            <a className="nav-link" href="#">Singles</a>
+                            <a className="nav-link" href="#">Sealed</a>
+                            <a className="nav-link disabled">Others</a>
+                        </div>
+                    </div>
+                </div>
                 <CartWidget/>
-            </div>
-        </nav>
+            </nav>
+        </div>
     )
 }
 
