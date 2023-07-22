@@ -19,7 +19,7 @@ function ItemListContainer({props}){
     }
     useEffect(()=> {
         requestProducts();
-    },[]);
+    },[categoryId]);
 
 
 

@@ -91,7 +91,7 @@ function getData(){
     return new Promise((res,rej) => {
         setTimeout(()=>{
             res(productos)
-        }, 2000)
+        }, 500)
     })
     
 }
@@ -103,7 +103,7 @@ export function getProductData(idURL){
         const productRequested = productos.find((item) => item.id === parseInt(idURL));
         setTimeout(()=>{
             res(productRequested)
-        }, 2000)
+        }, 500)
     })
 }
 
@@ -115,7 +115,7 @@ export function getCategoryData(categoryURL){
         });
         setTimeout(()=>{
             res(categoryRequested)
-        },2000)
+        },500)
     })
 
 }
