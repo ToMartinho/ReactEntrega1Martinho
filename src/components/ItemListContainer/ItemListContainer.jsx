@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import getData, {getCategoryData} from "../../services/asyncMock";
 import Item from "../Item/Item";
+import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css"
 import { useParams } from "react-router-dom";
 
 
 
-function ItemListContainer({props}){
+function ItemListContainer(){
 
     const [products, setProducts] = useState([])
     const {categoryId} = useParams();
@@ -26,16 +27,9 @@ function ItemListContainer({props}){
 
 
 
-    return(
-        <div>
-            <div>
-                <h1>{props}</h1>
-            </div>
-            <div className="contenedor col-12">
-                {products.map((item)=> <Item key={item.id} {...item} />)}
-            </div>
-        </div>
-    )
+    return <ItemList products={products} />
+        
+    
 }
 
 export default ItemListContainer;

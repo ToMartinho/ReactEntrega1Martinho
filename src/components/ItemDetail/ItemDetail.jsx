@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
+import "./ItemDetail.css";
 
 
 function ItemDetail(props){
     const {id ,img, title, price, tipo, stock} = props;
     return( 
         
-        <div className="card cardDetail">
+        <div className="card">
             <img src={img} className="card-img-top" alt="cartas"/>
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>
