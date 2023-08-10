@@ -1,19 +1,30 @@
-function Item(props){
-    const {id ,img, title, price, tipo, stock} = props;
+import { useContext } from "react";
+import { cartContext } from "../../App";
+
+function CartItems(){
+    const {cart, removeItem} = useContext(cartContext)
     return( 
         
-        <div className="card cardmia">
-            <img src={img} className="card-img-top" alt="carta"/>
-            <div className="card-body">
-                <h2 className="card-title">{title}</h2>
-                <h5>tipo: {tipo}</h5>
-                <p>stock: {stock}</p>
-                <p className="card-text">precio: {price}u$d</p>
-                <Link to={`/product/${id}`}>
-                    <button className="btn btn-primary">Ver Producto</button>
-                </Link>
-            </div>
+        <div>
+            {cart.map((item)=>(
+                <div>
+                    <div>                        
+                        <h2>{item.title}</h2>
+                        <img src={item.img} alt="carta"/>
+                        <p>precio por unidad: ${item.price}</p>
+                        <p>Cantidad a comprar: {item.count}</p>
+                        <p>precio total ${item.count * item.price}</p>
+                        <button onClick={() => removeItem(item.id)}>Eliminar</button>
+                    </div>
+                    <br />
+                    <div>
+                        total de la compra: $999
+                    </div>
+                </div>                
+            ))}
         </div>
         
     );
 }
+
+export default CartItems;
