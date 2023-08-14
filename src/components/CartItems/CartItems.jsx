@@ -17,9 +17,7 @@ function CartItems(){
                         <button onClick={() => removeItem(item.id)}>Eliminar</button>
                     </div>
                     <br />
-                    <div>
-                        total de la compra: $999
-                    </div>
+                    
                 </div>                
             ))}
         </div>

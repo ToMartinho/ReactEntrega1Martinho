@@ -10,6 +10,7 @@ import { cartContext } from "../../App";
 function ItemDetailContainer(){
     const [product, setProduct] = useState({});
     const { id } = useParams();
+    const [isAddedToCart, setIsAddedToCart] = useState(false);
 
     // extraemos la funcion de agregar del cartContext
     const {addToCart} = useContext(cartContext)
@@ -27,6 +28,7 @@ function ItemDetailContainer(){
     function handleAddToCart(clickCount){
         addToCart(product, clickCount);
         alert(`Producto agregado al carrito, cantidad: ${clickCount}`)
+        setIsAddedToCart(true)
 
     }
 
@@ -35,7 +37,9 @@ function ItemDetailContainer(){
         
         <div className="cardDetail">
             <ItemDetail {...product}/>
-            <ItemCount stock={product.stock} onAddToCart={handleAddToCart} />
+            {
+                isAddedToCart ? <button><Link to="/cart">Ir al carrito</Link></button> : <ItemCount stock={product.stock} onAddToCart={handleAddToCart} />
+            }
             <br />
             <Link to="/">
                 <button>Volver al Inicio</button>

@@ -27,7 +27,7 @@ function ItemCount(props){
             </div>
             <br />
             <div>
-                <button onClick={()=> {props.onAddToCart(clickCount)}}>
+                <button onClick={()=> {props.onAddToCart(clickCount)}} disabled={!props.stock}>
                     <h4>Añadir al carrito</h4>
                 </button>
             </div>

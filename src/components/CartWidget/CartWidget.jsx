@@ -8,8 +8,13 @@ import { Link } from 'react-router-dom';
 
 function CartWidget(){
     const context=useContext(cartContext);
-    console.log(context);
-
+    if(context.getTotalItemsInCart() === 0){
+        return(
+            <Link to="/cart">
+                <img className="CartImg" src={cart} alt="cart-widget"/>
+            </Link>
+        )
+    } 
     return(
         <div>
             <Link to="/cart">

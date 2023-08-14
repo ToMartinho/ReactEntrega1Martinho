@@ -19,6 +19,13 @@ function CartContextProvider(props){
       })
       return total;
     }
+    function totalCompra(){
+      let subTotal = 0;
+      cart.forEach((item)=>{
+        subTotal+= item.price * item.count;
+      })
+      return subTotal;
+    }
 
     function removeItem(id){
       const cartUpdated = cart.filter(item => item.id !== id)
@@ -30,7 +37,7 @@ function CartContextProvider(props){
     }
 
     return(
-      <cartContext.Provider value={{ cart, addToCart, getTotalItemsInCart, removeItem, clearCart}}>
+      <cartContext.Provider value={{ cart, addToCart, getTotalItemsInCart, removeItem, clearCart, totalCompra}}>
         {props.children}
       </cartContext.Provider>
     );
