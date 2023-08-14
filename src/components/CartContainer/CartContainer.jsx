@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { cartContext } from "../../App"; 
 import CartItems from "../CartItems/CartItems";
+import { Link } from "react-router-dom";
 
 
 function CartContainer(){
@@ -8,7 +9,14 @@ function CartContainer(){
     const context= useContext(cartContext)
 
     if(context.getTotalItemsInCart() === 0){
-        return <h2>No hay productos en el carrito</h2>
+        return(
+            <div>
+                <h2>No hay productos en el carrito</h2>
+                <button><Link to="/">Volver al inicio</Link></button>
+
+            </div>
+        ) 
+        
     }
     
     return(
