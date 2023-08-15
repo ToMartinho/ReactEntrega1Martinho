@@ -13,7 +13,10 @@ function ItemDetailContainer(){
     const [isAddedToCart, setIsAddedToCart] = useState(false);
 
     // extraemos la funcion de agregar del cartContext
-    const {addToCart} = useContext(cartContext)
+    const {addToCart, getItemInCart} = useContext(cartContext)
+    //validamos el stock disponible para la compra
+    const itemInCart = getItemInCart(id);
+    const maxItems = itemInCart ? product.stock - itemInCart.count : product.stock;
 
     async function requestProduct(){
         const respuesta = await getProductData(id);
@@ -38,7 +41,7 @@ function ItemDetailContainer(){
         <div className="cardDetail">
             <ItemDetail {...product}/>
             {
-                isAddedToCart ? <button><Link to="/cart">Ir al carrito</Link></button> : <ItemCount stock={product.stock} onAddToCart={handleAddToCart} />
+                isAddedToCart ? <button><Link to="/cart">Ir al carrito</Link></button> : <ItemCount stock={maxItems} onAddToCart={handleAddToCart} />
             }
             <br />
             <Link to="/">
