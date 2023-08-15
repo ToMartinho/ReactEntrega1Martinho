@@ -16,18 +16,17 @@ function ItemCount(props){
         }
     }
 
-    function handleConfirm(){}
     return(
         
         <div>
             <div>
-                <button disabled={props.stock === 0} onClick={handleClickSub}>-</button>
+                <button className="btn btn-primary" disabled={props.stock === 0} onClick={handleClickSub}>-</button>
                 <h3>{clickCount}</h3>
-                <button disabled={props.stock === 0} onClick={handleClickAdd}>+</button>
+                <button className="btn btn-primary" disabled={props.stock === 0} onClick={handleClickAdd}>+</button>
             </div>
             <br />
             <div>
-                <button disabled={props.stock === 0} onClick={()=> {props.onAddToCart(clickCount)}}>
+                <button className="btn btn-primary" disabled={props.stock === 0} onClick={()=> {props.onAddToCart(clickCount)}}>
                     <h4>Añadir al carrito</h4>
                 </button>
             </div>

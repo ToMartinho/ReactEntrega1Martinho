@@ -12,7 +12,7 @@ function CartContainer(){
         return(
             <div>
                 <h2>No hay productos en el carrito</h2>
-                <button><Link to="/">Volver al inicio</Link></button>
+                <button className="btn"><Link to="/">Volver al inicio</Link></button>
 
             </div>
         ) 
@@ -29,7 +29,7 @@ function CartContainer(){
                 total de la compra:$ {totalCompra()}
             </div>
            
-            <button onClick={()=> clearCart()}>Limpiar carrito de compras</button>
+            <button className="btn btn-primary" onClick={()=> clearCart()}>Limpiar carrito de compras</button>
         </div>
     )
 }

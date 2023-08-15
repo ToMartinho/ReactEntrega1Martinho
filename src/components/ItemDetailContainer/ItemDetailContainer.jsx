@@ -45,7 +45,7 @@ function ItemDetailContainer(){
             }
             <br />
             <Link to="/">
-                <button>Volver al Inicio</button>
+                <button className="btn btn-primary">Volver al Inicio</button>
             </Link>
         </div>
     );
