@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import getData, {getCategoryData} from "../../services/asyncMock";
+import { getData, getCategoryData } from "../../services/fireBase";
 import Item from "../Item/Item";
 import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css"
