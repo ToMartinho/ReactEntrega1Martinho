@@ -39,7 +39,6 @@ function ItemDetailContainer(){
             text: `Tu producto ${product.title} fue agregado al carrito, cantidad: ${clickCount}`,
             footer: '5Colors MTGStore '
         })
-        // alert(`Producto agregado al carrito, cantidad: ${clickCount}`)
         setIsAddedToCart(true)
 
     }
