@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# ECOMMERCE 5Colors MTGStore
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- el proyecto es un pequeño ecommerce basado en un TCG(trading card game) llamado Magic The gathering (MTG)
 
-## Available Scripts
+-------- FUNCIONABILIDADES DEL PROYECTO ----------
 
-In the project directory, you can run:
+el proyecto 5colors MTGStore cuenta con la siguiente funcionabilidades:
 
-### `npm start`
+-Desglose de la totalidad de los productos en el HomePage
+-Filtrado de procutos segun su categoria
+-Visualizacion individual de especificaciones del producto
+-Contador de items para agregar al carrito
+-Cuenta con la funcionabilidad de un CART para visualizar los productos a comprar
+Dentro de CART contamos con las siguiente funcionabilidades a traves del CONTEX:
+-Eliminar producto del carrito
+-Vaciar dicho carrito
+-Realizar el checkout de la compra
+-Conexion con una DB en este caso FIREBASE
+Dentro de firebase contamos con las siguiente funcionabilidades:
+-La extraccion de la coleccion "productos" donde se almacenan los productos del ecommerce
+-Generar una coleccion nueva "orders" donde se almacenaran por ID cada orden de compra
+El proyecto tambien cuenta con:
+-Renderizado condicional segun distintos "estados"
+-Alertas con librerias externas
+-CSS de BOOSTRAP
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+------------ DEPENDENCIAS -------------
+dependencias necesarias para el uso correcto de la APP:
+"bootstrap": "^5.3.0",
+"firebase": "^10.1.0",
+"react-dom": "^18.2.0",
+"react-router-dom": "^6.14.2",
+"sweetalert2": "^11.7.23",
+"sweetalert2-react-content": "^5.0.7",
