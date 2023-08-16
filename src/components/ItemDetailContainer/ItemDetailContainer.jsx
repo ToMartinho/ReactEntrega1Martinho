@@ -5,6 +5,8 @@ import { Link, useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import ItemCount from "../ItemCount/ItemCount";
 import { cartContext } from "../../App";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 
 function ItemDetailContainer(){
@@ -29,8 +31,15 @@ function ItemDetailContainer(){
     },[id]);
 
     function handleAddToCart(clickCount){
+        const MySwal = withReactContent(Swal);
         addToCart(product, clickCount);
-        alert(`Producto agregado al carrito, cantidad: ${clickCount}`)
+        MySwal.fire({
+            icon: 'success',
+            title: 'CARRITO',
+            text: `Tu producto ${product.title} fue agregado al carrito, cantidad: ${clickCount}`,
+            footer: '5Colors MTGStore '
+        })
+        // alert(`Producto agregado al carrito, cantidad: ${clickCount}`)
         setIsAddedToCart(true)
 
     }
