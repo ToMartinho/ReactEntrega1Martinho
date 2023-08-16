@@ -1,6 +1,6 @@
 // FIREBASE
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, doc, getDoc, where, query } from "firebase/firestore";
+import { getFirestore, collection, getDocs, doc, getDoc, where, query, addDoc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBGW6O5rfA6TWhpEBqDRkpI79V3NK-KHL0",
@@ -48,4 +48,11 @@ async function getCategoryData(category){
     return documents.map((item) =>({...item.data(), id: item.id}));
 }
 
-export { getData, getProductData, getCategoryData }
+async function createOrder(orderData){
+    const collectionRef = collection(db,"orders")
+    const docCreated = await addDoc(collectionRef, orderData)
+
+    return(docCreated.id)
+}
+
+export { getData, getProductData, getCategoryData, createOrder }
