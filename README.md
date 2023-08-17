@@ -12,7 +12,7 @@
 
 -Desglose de la totalidad de los productos en el HomePage
 
--Filtrado de procutos segun su categoria
+-Filtrado de procdutos segun su categoria
 
 -Visualizacion individual de especificaciones del producto
 
@@ -22,7 +22,7 @@
 
 -------------------
 
-- Dentro de CART contamos con las siguiente funcionabilidades a traves del CONTEX:
+- Dentro de CART contamos con las siguiente funcionabilidades a traves del CONTEXT:
 
 -------------------
 
